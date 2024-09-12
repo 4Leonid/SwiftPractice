@@ -2,36 +2,34 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  let stackView = UIStackView()
-  let label = UILabel()
+  private let customView = CustomView()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
-    style()
-    layout()
+    setupUI()
+    configureSubviews()
+    setupConstraints()
   }
 }
 
+//  MARK: - Set Views and Constraints
 extension ViewController {
-  func style() {
-    stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.axis = .vertical
-    stackView.spacing = 20
-    
-    label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "Dummy"
-    label.font = UIFont.preferredFont(forTextStyle: .title1)
+  func setupUI() {
+    customView.translatesAutoresizingMaskIntoConstraints = false
   }
   
-  func layout() {
-    stackView.addArrangedSubview(label)
-    
-    view.addSubview(stackView)
+  func configureSubviews() {
+    view.addSubview(customView)
+  }
+  
+  func setupConstraints() {
     
     NSLayoutConstraint.activate([
-      stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      customView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+      customView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+      customView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      customView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
     ])
   }
 }
