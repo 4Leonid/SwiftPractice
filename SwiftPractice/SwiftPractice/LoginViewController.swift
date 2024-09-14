@@ -1,20 +1,33 @@
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
   
-  private let customView = CustomView()
+  private let customView = LoginView()
+  
+  private let email = "Leo"
+  private let password = "1234"
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .white
+    view.backgroundColor = .lightGray
     setupUI()
     configureSubviews()
     setupConstraints()
   }
 }
 
+extension LoginViewController {
+  func checkAuth(email: String, password: String) {
+    if Validator.validateEmail(email: email) && Validator.validatePassword(password: password) {
+      print("You data is correct")
+    } else {
+      print("You data is wrong?")
+    }
+  }
+}
+
 //  MARK: - Set Views and Constraints
-extension ViewController {
+extension LoginViewController {
   func setupUI() {
     customView.translatesAutoresizingMaskIntoConstraints = false
   }
