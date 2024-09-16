@@ -45,5 +45,9 @@ extension LoginViewController {
       customView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
     ])
   }
+  
+  func setDelegates() {
+    customView.delegate = self 
+  }
 }
 
