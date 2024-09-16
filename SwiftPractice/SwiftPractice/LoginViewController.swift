@@ -4,24 +4,23 @@ class LoginViewController: UIViewController {
   
   private let customView = LoginView()
   
-  private let email = "Leo"
-  private let password = "1234"
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .lightGray
     setupUI()
     configureSubviews()
     setupConstraints()
+    setDelegates()
   }
 }
 
+// MARK: - Actions
 extension LoginViewController {
   func checkAuth(email: String, password: String) {
-    if Validator.validateEmail(email: email) && Validator.validatePassword(password: password) {
+    if Validator.validateEmail(login: email) && Validator.validatePassword(password: password) {
       print("You data is correct")
     } else {
-      print("You data is wrong?")
+      print("You data is wrong!!!")
     }
   }
 }
@@ -37,7 +36,6 @@ extension LoginViewController {
   }
   
   func setupConstraints() {
-    
     NSLayoutConstraint.activate([
       customView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
       customView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),

@@ -1,17 +1,10 @@
-//
-//  CustomView.swift
-//  SwiftPractice
-//
-//  Created by Леонид Турко on 12.09.2024.
-//
-
 import UIKit
 
 class LoginView: UIView {
   
   // MARK: - UIElements
   private let appImage = UIImageView()
-  let loginButton = UIButton(type: .system)
+  private let loginButton = UIButton(type: .system)
   
   private var vLabelStackView = UIStackView()
   private var vTextFieldStackView = UIStackView()
@@ -34,16 +27,6 @@ class LoginView: UIView {
     setupConstraints()
     makeNotification()
   }
-  
-//  override init(frame: CGRect) {
-//    super.init(frame: frame)
-//    
-//    setupUI()
-//    configureSubviews()
-//    setupConstraints()
-//    
-//    makeNotification()
-//  }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
@@ -85,9 +68,13 @@ extension LoginView {
 // MARK: - Actions
 extension LoginView {
   @objc func buttonTapped() {
-    let email = loginTextField.text ?? ""
-    let password = passwordTextField.text ?? ""
-    delegate?.checkAuth(email: email, password: password)
+    guard
+      let login = loginTextField.text,
+      let password = passwordTextField.text
+    else {
+      return
+    }
+    delegate?.checkAuth(email: login, password: password)
   }
 }
 
