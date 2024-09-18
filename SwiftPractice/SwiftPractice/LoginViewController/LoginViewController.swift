@@ -3,6 +3,7 @@ import UIKit
 class LoginViewController: UIViewController {
   
   private let customView = LoginView()
+  private var isLogged = false
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,9 +20,19 @@ extension LoginViewController {
   func checkAuth(email: String, password: String) {
     if Validator.validateEmail(login: email) && Validator.validatePassword(password: password) {
       print("You data is correct")
+        showTabBar()
+      dismiss(animated: true)
     } else {
       print("You data is wrong!!!")
     }
+  }
+}
+
+// MARK: - Actions
+extension LoginViewController {
+  private func showTabBar() {
+    let tabBarVC = TabBarController()
+    present(tabBarVC, animated: true)
   }
 }
 

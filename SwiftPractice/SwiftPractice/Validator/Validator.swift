@@ -1,11 +1,11 @@
-class Validator {
+final class Validator {
   
   // MARK: - Validate Email
   static func validateEmail(login: String?) -> Bool {
     guard
       let login = login,
       !login.isEmpty,
-      login == Constants.login.rawValue
+      login == Constants.login
     else {
       return false
     }
@@ -21,7 +21,7 @@ class Validator {
     guard
       let password = password,
         !password.isEmpty,
-      password == Constants.password.rawValue
+      password == Constants.password
     else {
       return false
     }

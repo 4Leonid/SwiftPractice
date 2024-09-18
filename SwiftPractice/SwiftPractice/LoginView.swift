@@ -74,7 +74,7 @@ extension LoginView {
     else {
       return
     }
-    delegate?.checkAuth(email: login, password: password)
+      delegate?.checkAuth(email: login, password: password)
   }
 }
 

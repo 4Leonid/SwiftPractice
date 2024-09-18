@@ -1,4 +1,4 @@
-enum Constants: String {
-  case login = "Leo"
-  case password = "1234"
+enum Constants {
+  static let login = "Leo"
+  static let password = "1234"
 }
