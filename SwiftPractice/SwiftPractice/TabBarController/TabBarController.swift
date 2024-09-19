@@ -8,7 +8,6 @@ final class TabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupTabBar()
-    print("\(#function)")
   }
   
   // MARK: - For login View
