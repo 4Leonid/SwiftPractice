@@ -20,7 +20,6 @@ extension LoginViewController {
   func checkAuth(email: String, password: String) {
     if Validator.validateEmail(login: email) && Validator.validatePassword(password: password) {
       print("You data is correct")
-        showTabBar()
       dismiss(animated: true)
     } else {
       print("You data is wrong!!!")
@@ -29,12 +28,7 @@ extension LoginViewController {
 }
 
 // MARK: - Actions
-extension LoginViewController {
-  private func showTabBar() {
-    let tabBarVC = TabBarController()
-    present(tabBarVC, animated: true)
-  }
-}
+
 
 //  MARK: - Set Views and Constraints
 extension LoginViewController {

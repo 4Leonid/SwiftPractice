@@ -11,24 +11,21 @@ final class TabBarController: UITabBarController {
     print("\(#function)")
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    print("\(#function)")
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    if !isLogged {
-      isLogged = true
-      showLogin()
-    }
-    print("\(#function)")
-  }
+  // MARK: - For login View
+//  override func viewDidAppear(_ animated: Bool) {
+//    super.viewDidAppear(animated)
+//    if !isLogged {
+//      showLogin()
+//      isLogged = true
+//    }
+//    print("\(#function)")
+//  }
 }
 
 // MARK: - Actions
 extension TabBarController {
   private func showLogin() {
+    
     let loginVC = LoginViewController()
     loginVC.modalPresentationStyle = .fullScreen
     present(loginVC, animated: true)
@@ -38,7 +35,7 @@ extension TabBarController {
 // MARK: - Private Actions
 private extension TabBarController {
   func setupTabBar() {
-    let firstVC = FirstViewController()
+    let firstVC = WelcomeViewController()
     let secondVC = SecondViewController()
     
     
