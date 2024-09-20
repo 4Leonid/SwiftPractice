@@ -13,6 +13,9 @@
 		BF07B7FA2C9C3C81006B43F3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07B7F92C9C3C81006B43F3 /* WelcomeView.swift */; };
 		BF07B7FC2C9C4082006B43F3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07B7FB2C9C4082006B43F3 /* DetailViewController.swift */; };
 		BF07B7FE2C9C4178006B43F3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07B7FD2C9C4178006B43F3 /* DetailView.swift */; };
+		BF07B80C2C9D9A3E006B43F3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07B80B2C9D9A3E006B43F3 /* TableViewController.swift */; };
+		BF07B80E2C9D9A48006B43F3 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07B80D2C9D9A48006B43F3 /* TableView.swift */; };
+		BF07B8102C9D9B0A006B43F3 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07B80F2C9D9B0A006B43F3 /* CustomCell.swift */; };
 		BF2C6D212C95E6CD00965CC0 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C6D202C95E6CD00965CC0 /* Validator.swift */; };
 		BF2C6D2A2C988ECB00965CC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2C6D292C988ECB00965CC0 /* Constants.swift */; };
 		BF5158972C905D2C008A1E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5158962C905D2C008A1E8F /* AppDelegate.swift */; };
@@ -31,6 +34,9 @@
 		BF07B7F92C9C3C81006B43F3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		BF07B7FB2C9C4082006B43F3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BF07B7FD2C9C4178006B43F3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		BF07B80B2C9D9A3E006B43F3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BF07B80D2C9D9A48006B43F3 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		BF07B80F2C9D9B0A006B43F3 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		BF2C6D202C95E6CD00965CC0 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		BF2C6D292C988ECB00965CC0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF5158932C905D2C008A1E8F /* SwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +104,16 @@
 			path = DetailViewController;
 			sourceTree = "<group>";
 		};
+		BF07B80A2C9D99E7006B43F3 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF07B80B2C9D9A3E006B43F3 /* TableViewController.swift */,
+				BF07B80D2C9D9A48006B43F3 /* TableView.swift */,
+				BF07B80F2C9D9B0A006B43F3 /* CustomCell.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
 		BF2C6D222C95E6DE00965CC0 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +141,7 @@
 		BF5158952C905D2C008A1E8F /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				BF07B80A2C9D99E7006B43F3 /* TableViewController */,
 				BF07B7C92C9ACA8C006B43F3 /* TabBarController */,
 				BF07B7FF2C9C7763006B43F3 /* DetailViewController */,
 				BF07B7D22C9AD23E006B43F3 /* LoginViewController */,
@@ -221,9 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF07B7CF2C9ACE96006B43F3 /* WelcomeViewController.swift in Sources */,
+				BF07B80E2C9D9A48006B43F3 /* TableView.swift in Sources */,
+				BF07B80C2C9D9A3E006B43F3 /* TableViewController.swift in Sources */,
 				BF51589B2C905D2C008A1E8F /* LoginViewController.swift in Sources */,
 				BF07B7CB2C9ACAA0006B43F3 /* TabBarController.swift in Sources */,
 				BFF0982C2C92E10500FE92E8 /* LoginView.swift in Sources */,
+				BF07B8102C9D9B0A006B43F3 /* CustomCell.swift in Sources */,
 				BF5158972C905D2C008A1E8F /* AppDelegate.swift in Sources */,
 				BFF0982F2C92E44300FE92E8 /* UIView+Extension.swift in Sources */,
 				BF2C6D2A2C988ECB00965CC0 /* Constants.swift in Sources */,

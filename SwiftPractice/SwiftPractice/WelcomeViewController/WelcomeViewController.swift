@@ -4,6 +4,7 @@ final class WelcomeViewController: UIViewController {
   
   // MARK: - Private Properties
   private lazy var welcomeView = WelcomeView()
+  private var text: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -12,6 +13,12 @@ final class WelcomeViewController: UIViewController {
     configureSubviews()
     setupConstraints()
     setDelegates()
+  }
+}
+
+extension WelcomeViewController: WelcomeViewDelegate {
+  func show(_ viewController: UIViewController) {
+    navigationController?.pushViewController(viewController, animated: true)
   }
 }
 

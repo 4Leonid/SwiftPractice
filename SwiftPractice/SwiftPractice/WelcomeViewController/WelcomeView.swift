@@ -1,8 +1,12 @@
 import UIKit
 
+protocol WelcomeViewDelegate: AnyObject {
+  func show(_ viewController: UIViewController)
+}
+
 class WelcomeView: UIView {
-  
-  weak var delegate: WelcomeViewController?
+
+  weak var delegate: WelcomeViewDelegate?
   
   // MARK: - UIElements
   private let moreStackView = UIStackView()
@@ -28,8 +32,7 @@ extension WelcomeView {
     let detailVC = DetailViewController()
     guard let text = textField.text else { return }
     detailVC.updateText(with: text)
-    //delegate?.navigationController?.pushViewController(detailVC, animated: true)
-    delegate?.showViewController(detailVC)
+    delegate?.show(detailVC)
   }
 }
 
