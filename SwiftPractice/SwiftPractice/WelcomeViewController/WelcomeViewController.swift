@@ -15,6 +15,13 @@ final class WelcomeViewController: UIViewController {
   }
 }
 
+// MARK: - Actions
+extension WelcomeViewController {
+  func showViewController(_ vc: UIViewController) {
+    navigationController?.pushViewController(vc, animated: true)
+  }
+}
+
 //  MARK: - Set Views and Constraints
 extension WelcomeViewController {
   func setupUI() {
@@ -33,6 +40,6 @@ extension WelcomeViewController {
   }
   
   func setDelegates() {
-    welcomeView.delegate = self 
+    welcomeView.delegate = self
   }
 }

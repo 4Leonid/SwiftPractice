@@ -20,7 +20,7 @@ class DetailView: UIView {
   }
 }
 
-// MARK: - SendViewProtocol
+// MARK: - DetailViewProtocol
 extension DetailView: DetailViewProtocol {
   func updateLabel(with text: String) {
     textLabel.text = text
